@@ -1,0 +1,124 @@
+<!-- Google Fonts Lato -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+<form action="https://formspree.io/f/mgovorjq" method="POST" enctype="multipart/form-data"
+      style="max-width:950px;margin:auto;font-family:'Lato', Arial, sans-serif;
+             background:#ffffff;padding:25px;border-radius:12px;color:#232323;
+             display:flex; flex-direction:column; gap:20px; box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+
+  <!-- Projet -->
+  <h2 style="margin:0;">Projet</h2>
+
+  <div class="row">
+    <div class="col">
+      <label for="projectType">Type de projet *</label>
+      <input type="text" id="projectType" name="projectType" required placeholder="Ex: Affiche, Stand, Événement">
+    </div>
+    <div class="col">
+      <label for="projectFile">Joignez un fichier</label>
+      <input type="file" id="projectFile" name="projectFile" accept=".pdf,.jpeg,.jpg,.png">
+    </div>
+  </div>
+
+  <div class="single">
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre projet..."></textarea>
+  </div>
+
+  <!-- Coordonnées -->
+  <h2 style="margin:0;">Coordonnées</h2>
+
+  <div class="row">
+    <div class="col">
+      <label for="name">Nom / Prénom *</label>
+      <input type="text" id="name" name="name" required placeholder="Votre nom et prénom">
+    </div>
+    <div class="col">
+      <label for="company">Entreprise</label>
+      <input type="text" id="company" name="company" placeholder="Nom de votre entreprise">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="address">Adresse</label>
+      <input type="text" id="address" name="address" placeholder="Ex: 12 rue du Marché">
+    </div>
+    <div class="col">
+      <label for="city">Ville *</label>
+      <input type="text" id="city" name="city" required placeholder="Votre ville">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <label for="phone">Téléphone *</label>
+      <input type="text" id="phone" name="phone" required placeholder="Votre numéro">
+    </div>
+    <div class="col">
+      <label for="email">Adresse Mail *</label>
+      <input type="email" id="email" name="email" required placeholder="exemple@mail.com">
+    </div>
+  </div>
+
+  <!-- Bouton Envoyer -->
+  <button type="submit">Envoyer</button>
+
+</form>
+
+<style>
+  form input, form textarea, form select {
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    background:#d9d9d9;
+    font-family:'Lato', Arial, sans-serif;
+    box-sizing:border-box;
+  }
+
+  form label {
+    font-weight:bold;
+    margin-bottom:5px;
+    display:block;
+  }
+
+  form button {
+    background:#232323;
+    color:#fff;
+    padding:14px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    transition: background 0.3s;
+  }
+
+  form button:hover {
+    background:#555;
+  }
+
+  .row {
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+  .col {
+    flex:1 1 300px;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .single {
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* Responsive : sur mobile, tout passe en colonne */
+  @media screen and (max-width: 768px) {
+    .row {
+      flex-direction:column !important;
+    }
+  }
+</style>
